@@ -189,11 +189,27 @@
     });
     </script>
 
+    <h3>5 - $event Object showing coordinates</h3>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+    <h1 ng-mousemove="myFunc($event)">Mouse Over Me!</h1>
+        
+    <p>Coordinates: {{x + ', ' + y}}</p>
+        
+    </div>
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.myFunc = function(myE) {
+            $scope.x = myE.clientX;
+            $scope.y = myE.clientY;
+        }
+    });
+    </script> 
+
     
-
-
-
-
 
 </body>
 </html>
