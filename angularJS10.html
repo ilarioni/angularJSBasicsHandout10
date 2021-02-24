@@ -149,6 +149,22 @@
     });
     </script> 
 
+    <h3> 3 - rewrite previous examples in different way</h3>
+    <div ng-app="myApp" ng-controller="myCtrl">
+    <button ng-click="myFunction()">Click Me!</button>
+    <p>{{ count }}</p>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.count = 0;
+        $scope.myFunction = function() {
+            $scope.count++;
+        }
+    });
+    </script> 
+
+
 
 
 
